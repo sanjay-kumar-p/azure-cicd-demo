@@ -33,28 +33,19 @@
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${mule.version}</muleVersion>
-						<server>${server}</server>
+						<muleVersion>4.4.0</muleVersion>
+						<username>sanjaykumar123</username>
+						<password>S@njay9035</password>
 						<!-- Environment Parameter -->
-						<environment>${env}</environment>
-						<applicationName>${appname}</applicationName>
-						<businessGroup>${business}</businessGroup>
-						<workerType>${vCore}</workerType>
-						<workers>${workers}</workers>
+						<environment>Sandbox</environment>
+						<applicationName>exp-api-flights-v1</applicationName>
+						<businessGroup>Mulesoft</businessGroup>
+						<workerType>Micro</workerType>
+						<workers>1</workers>
+						<region>us-west-1</region>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
-				<executions>
-						<execution>
-							<id>deploy</id>
-							<goals>
-								<goal>deploy</goal>
-							</goals>
-							<configuration>
-								<classifier>mule-application</classifier>
-							</configuration>
-						</execution>
-					</executions>
 			</plugin>
 		</plugins>
 	</build>
