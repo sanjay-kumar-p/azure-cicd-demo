@@ -43,7 +43,8 @@
 						<workers>${workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
-					<executions>
+				</configuration>
+				<executions>
 						<execution>
 							<id>deploy</id>
 							<goals>
@@ -54,7 +55,6 @@
 							</configuration>
 						</execution>
 					</executions>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
