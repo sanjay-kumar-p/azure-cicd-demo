@@ -13,6 +13,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="exp-api-flights-v1Flow" doc:id="5c71f4bc-1136-418f-ae84-aa1723f0edce" >
 		<http:listener doc:name="Listener" doc:id="02fd7f33-2ed4-4274-8b25-5a2b0a3983c1" config-ref="HTTP_Listener_config" path="/flights"/>
 		<http:request method="GET" doc:name="Request" doc:id="83d4f7dc-1276-440d-a56b-f77a4c83fe5e" config-ref="HTTP_Request_configuration" path="/flights"/>
-		<logger level="INFO" doc:name="Logger" doc:id="143fbdaf-a3b2-4192-be33-d0dd6aae33dd" message="#[payload]"/>
+		<logger level="INFO" doc:name="Response" doc:id="143fbdaf-a3b2-4192-be33-d0dd6aae33dd" message="#[payload]"/>
 	</flow>
 </mule>
