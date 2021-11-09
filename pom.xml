@@ -37,6 +37,17 @@
 						<workers>${workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
+					<executions>
+						<execution>
+							<id>deploy</id>
+							<goals>
+								<goal>deploy</goal>
+							</goals>
+							<configuration>
+								<classifier>mule-application</classifier>
+							</configuration>
+						</execution>
+					</executions>
 				</configuration>
 			</plugin>
 			<plugin>
