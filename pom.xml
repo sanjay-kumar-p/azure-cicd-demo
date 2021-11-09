@@ -22,7 +22,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.0.0</version>	
+			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
@@ -49,12 +55,6 @@
 						</execution>
 					</executions>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>
@@ -93,6 +93,18 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+         <id>MuleRepository</id>
+         <name>MuleRepository</name>
+         <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+         <layout>default</layout>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>true</enabled>
+         </snapshots>
+      </repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -105,6 +117,12 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		<pluginRepository>
+         <id>MuleRepository</id>
+         <name>MuleRepository</name>
+         <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+         <layout>default</layout>
+      </pluginRepository>
 	</pluginRepositories>
 
 </project>
