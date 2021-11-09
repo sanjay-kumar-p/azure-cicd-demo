@@ -51,5 +51,5 @@ steps:
     mavenHomeOption: 'Default'
     effectivePomSkip: true
     sonarQubeRunAnalysis: false
-    goals: 'clean install package deploy $(MAVEN_OPTS) -DmuleDeploy -Dmule.version=$(mule.version) -Danypoint.username=$(anypoint.username) -Danypoint.password=$(anypoint.password) -Denv=$(env) -Dappname=$(appname) -Dbusiness=$(business) -DvCore=$(vCore) -Dworkers=$(workers)'
+    goals: 'clean install package deploy $(MAVEN_OPTS) -DmuleDeploy -Dmule.version=$(mule.version) -Dserver=$(server) -Denv=$(env) -Dappname=$(appname) -Dbusiness=$(business) -DvCore=$(vCore) -Dworkers=$(workers)'
     
