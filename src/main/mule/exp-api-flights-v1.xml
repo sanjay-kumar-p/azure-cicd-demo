@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="5bcfe6f0-8793-478e-addf-d47f9706dd01" basePath="/" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="a1d2255f-3639-46fd-8d2c-3f256f337716" basePath="/api">
+		<http:request-connection host="training-american-ws.cloudhub.io" />
+	</http:request-config>
+	<flow name="exp-api-flights-v1Flow" doc:id="5c71f4bc-1136-418f-ae84-aa1723f0edce" >
+		<http:listener doc:name="Listener" doc:id="02fd7f33-2ed4-4274-8b25-5a2b0a3983c1" config-ref="HTTP_Listener_config" path="/flights"/>
+		<http:request method="GET" doc:name="Request" doc:id="83d4f7dc-1276-440d-a56b-f77a4c83fe5e" config-ref="HTTP_Request_configuration" path="/flights"/>
+	</flow>
+</mule>
